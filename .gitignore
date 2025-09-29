@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+
+# Data and artifacts
+data/raw/
+data/tmp/
+data/cache/
+*.jsonl.tmp
+
+# Large model outputs and checkpoints
+**/checkpoints/
+**/checkpoint-*/
+**/runs/
+**/wandb/
+*.pt
+*.bin
+*.safetensors
+
+
+# Virtual envs and caches
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs and eval outputs
+logs/
+**/eval_*/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

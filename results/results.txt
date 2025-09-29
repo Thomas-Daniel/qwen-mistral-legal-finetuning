@@ -1,0 +1,66 @@
+=== Evaluation Report === 
+Model: Qwen/Qwen2-7B-Instruct 
+Dataset: ledgar [eval] 
+Samples: 500 
+Attn impl.: flash2 
+accuracy: 0.4880 
+macro_f1: 0.3931 
+=========================
+
+python train_alpaca_fullft.py \
+  --model_name Qwen/Qwen2-7B-Instruct \
+  --data_root ./data/processed \
+  --dataset ledgar \
+  --output_dir ./qwen2-7b-ledgar-fullft \
+  --epochs 2 \
+  --batch_size 6 \
+  --grad_accum 6 \
+  --lr 2e-5 \
+  --max_seq_len 1536 \
+  --flash_attn \
+  --no_checkpointing
+
+# Results
+Accuracy:   0.6640
+Macro-F1:   0.5317
+Samples:    500
+
+# Results
+Accuracy:   0.6620
+Macro-F1:   0.5579
+Samples:    1000
+
+________________________________________________________________________________________________________________________
+
+=== Evaluation Report ===
+Model:       mistralai/Mistral-7B-Instruct-v0.3
+Dataset:     ledgar [eval]
+Samples:     500
+Attn impl.:  flash2
+accuracy: 0.5600
+macro_f1: 0.4859
+=========================
+
+python train_alpaca_fullft.py \
+  --model_name mistralai/Mistral-7B-Instruct-v0.3 \
+  --data_root ./data/processed \
+  --dataset ledgar \
+  --output_dir ./mistral7b-ledgar-fullft \
+  --epochs 2 \
+  --batch_size 6 \
+  --grad_accum 6 \
+  --lr 2e-5 \
+  --max_seq_len 1536 \
+  --flash_attn \
+  --no_checkpointing
+
+# Results
+Accuracy:   0.7560
+Macro-F1:   0.6420
+Samples:    500
+
+# Results
+Accuracy:   0.7600
+Macro-F1:   0.6276
+Samples:    1000
+

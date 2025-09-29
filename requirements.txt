@@ -1,0 +1,13 @@
+transformers>=4.43
+accelerate>=0.33
+trl>=0.9.6
+peft>=0.12.0
+datasets>=2.20
+bitsandbytes>=0.43.1
+evaluate>=0.4.2
+scikit-learn>=1.4
+torch>=2.3
+tensorboard>=2.16
+tqdm>=4.66
+numpy>=1.26
+pandas>=2.2
